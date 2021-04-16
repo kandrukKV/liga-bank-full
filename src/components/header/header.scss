@@ -1,0 +1,78 @@
+@import "../../design-tokens/variables";
+
+.header {
+  padding-top: 27px;
+  padding-bottom: 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__link {
+  display: flex;
+  align-items: flex-end;
+  color: $default-text-color;
+  text-decoration: none;
+  margin-bottom: -10px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.header__icon {
+  width: 20px;
+  height: 22px;
+}
+
+.header__hamburger-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
+.header__login {
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: $tablet-width){
+  .header {
+    padding-top: 20px;
+  }
+
+  .header__login {
+    display: none;
+  }
+
+  .header__link {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile-width){
+
+  .header {
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+
+  .header__hamburger-btn {
+    padding: 0;
+    display: block;
+    margin-right: 14px;
+  }
+
+  .header__icon {
+    width: 14px;
+    height: 16px;
+  }
+
+  .header__hamburger-icon {
+    stroke: $default-text-color;
+  }
+}

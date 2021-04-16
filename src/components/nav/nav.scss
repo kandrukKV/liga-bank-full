@@ -1,0 +1,45 @@
+@import "../../design-tokens/variables";
+
+.nav {
+  padding-left: 110px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 25px;
+}
+
+.nav__link {
+  color: $default-text-color;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-width){
+  .nav {
+    padding-left: 68px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .nav__item {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width){
+  .nav {
+    display: none;
+  }
+}
