@@ -7,8 +7,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__wrap theme-container">
-        <div className="footer__name">
+        <div className="footer__logo">
           <Logo/>
+        </div>
+        <div className="footer__name">
           <p className="footer__desc">150015, г. Москва, ул. Московская, д. 32</p>
           <p className="footer__desc">Генеральная лицензия Банка России №1050</p>
           <p className="footer__desc">Ⓒ Лига Банк, 2019</p>
@@ -19,7 +21,7 @@ const Footer = () => {
           <li className="footer__nav-item"><a href="#">Контакты</a></li>
           <li className="footer__nav-item"><a href="#">Задать вопрос</a></li>
         </ul>
-        <div className="footer__phone">
+        <div className="footer__phone footer__service">
           <svg className="footer__phone-img" width="10" height="16">
             <use href={sprites + `#phone-one` }/>
           </svg>
@@ -27,7 +29,7 @@ const Footer = () => {
           <p className="footer__desc">Бесплатно для абонентов</p>
           <p className="footer__desc">МТС, Билайн, Мегафон, Теле2</p>
         </div>
-        <div className="footer__phone">
+        <div className="footer__phone footer__mobile">
           <svg className="footer__phone-img" width="16" height="16">
             <use href={sprites + `#phone-two` }/>
           </svg>

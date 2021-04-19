@@ -1,0 +1,36 @@
+@import '../../design-tokens/variables';
+
+.tabs {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.tabs__link {
+  min-height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.swiper-slide-thumb-active .tabs__link {
+  background-color: $gray-bg;
+}
+
+.tabs__icon {
+  display: block;
+  margin-right: 10px;
+}
+
+@media (max-width: $tablet-width) {
+  .tabs {
+    padding: 0;
+  }
+
+  .tabs__thumbs {
+    display: none;
+  }
+}

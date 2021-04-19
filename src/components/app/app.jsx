@@ -6,6 +6,9 @@ import robotoMedium from '../../fonts/Roboto-Medium.woff2';
 import robotoBold from '../../fonts/Roboto-Bold.woff2';
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import Slider from "../slider/slider";
+import Tabs from "../tabs/tabs";
+import Calculator from "../calculator/calculator";
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
         <link rel="preload" href={robotoBold} as="font" type="font/woff2"/>
       </Helmet>
       <Header/>
+      <Slider/>
+      <Tabs/>
+      <Calculator/>
       <Footer/>
 
     </div>

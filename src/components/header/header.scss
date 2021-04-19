@@ -40,9 +40,10 @@
   margin: 0 0 0 10px;
 }
 
-@media (max-width: $tablet-width){
+@media (max-width: $tablet-width) {
   .header {
     padding-top: 20px;
+    padding-bottom: 24px;
   }
 
   .header__login {
@@ -54,7 +55,7 @@
   }
 }
 
-@media (max-width: $mobile-width){
+@media (max-width: $mobile-width) {
 
   .header {
     padding-top: 15px;

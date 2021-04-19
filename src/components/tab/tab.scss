@@ -1,0 +1,88 @@
+@import '../../design-tokens/variables';
+
+.tab {
+  padding: 53px 70px;
+  display: flex;
+  background-color: $gray-bg;
+}
+
+.tab__text {
+  width: 50%;
+}
+
+.tab__title {
+  font-size: 22px;
+  line-height: 31px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  max-width: 375px;
+}
+
+.tab__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 33px 0;
+}
+
+.tab__item {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 23px;
+  max-width: 400px;
+}
+
+.tab__bottom {
+  width: 340px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.tab__link {
+  color: $default-text-color;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.tab__btn {
+  display: block;
+  max-width: 200px;
+  padding: 18px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  background-color: $blue-bg;
+  border-radius: 4px;
+  color: $gray-bg;
+  text-decoration: none;
+}
+
+.tab__img {
+  width: 50%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (max-width: $tablet-width) {
+  .tab {
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .tab__title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .tab__item {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

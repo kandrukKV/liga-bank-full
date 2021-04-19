@@ -1,6 +1,74 @@
+import React from 'react';
+import vaultIcon from "./img/vault.svg";
+import cardsIcon from "./img/cards.svg";
+import securityIcon from "./img/security.svg";
+import phoneIcon from "./img/phone.svg";
+import piggy from "./img/piggybank.jpg";
+import car from "./img/car.jpg";
+import lock from "./img/lock.jpg";
+import phone from "./img/phone_tab.jpg";
+
 export const MENU_LIST = [
   {name: `Услуги`, id: 1},
   {name: `Рассчитать кредит`, id: 2},
   {name: `Конвертер валют`, id: 3},
   {name: `Контакты`, id: 4},
+];
+
+export const THUMBS = [
+  {name: `Вклады`, icon: vaultIcon},
+  {name: `Кредиты`, icon: cardsIcon},
+  {name: `Страхование`, icon: securityIcon},
+  {name: `Онлайн-сервисы`, icon: phoneIcon},
+];
+
+export const TABS = [
+  {
+    title: `Вклады Лига Банка – это выгодная инвестиция в свое будущее`,
+    listItems: [`Проценты по вкладам до 7%`, `Разнообразные условия`, `Возможность ежемесячной капитализации или вывод процентов на банковскую карту`],
+    decorImg: piggy,
+    link: <a className="tab__btn" href="#">Узнать подробнее</a>
+  },
+
+  {
+    title: `Лига Банк выдает кредиты под любые цели`,
+    listItems: [`Ипотечный кредит`, `Автокредит`, `Потребительский кредит`],
+    decorImg: car,
+    link: <>Рассчитайте ежемесячный платеж и ставку по кредиту воспользовавшись нашим <a className="tab__link" href="#">кредитным калькулятором</a></>
+  },
+
+  {
+    title: `Лига Страхование - застрахуем всё, что захотите`,
+    listItems: [`Автомобильное страхование`, `Страхование жизни и здоровья`, `Страхование недвижимости`],
+    decorImg: lock,
+    link: <a className="tab__btn" href="#">Узнать подробнее</a>
+  },
+
+  {
+    title: `Лига Банк — это огромное количество онлайн-сервисов для вашего удобства`,
+    listItems: [`Мобильный банк,который всегда под рукой`, `Приложение Лига-проездной позволит вам оплачивать билеты по всему миру`],
+    decorImg: phone,
+    link: <a className="tab__btn" href="#">Узнать подробнее</a>
+  }
+];
+
+export const SLIDES = [
+  {
+    subtitle: `Кредиты на любой случай`,
+    linkName: `Рассчитать кредит`,
+    isWhite: true,
+    background: `first`
+  },
+  {
+    subtitle: `Ваша уверенность в завтрашнем дне`,
+    linkName: `Рассчитать кредит`,
+    isWhite: false,
+    background: `second`
+  },
+  {
+    subtitle: `Всегда радом`,
+    linkName: `Найти отделение`,
+    isWhite: false,
+    background: `third`
+  }
 ];
