@@ -1,0 +1,23 @@
+@import "../../design-tokens/variables";
+
+.range-slider__label {
+  height: 14px;
+  width: 14px;
+  background-color: $blue-bg;
+  border-radius: 50%;
+}
+
+.range-slider__scale {
+  height: 1px;
+  width: 100%;
+  background-color: #C1C2CA;
+}
+
+.range-slider__output {
+  position: absolute;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707C87;
+  top: 15px;
+  width: 40px;
+}

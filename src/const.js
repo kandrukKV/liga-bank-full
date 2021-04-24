@@ -72,3 +72,101 @@ export const SLIDES = [
     background: `third`
   }
 ];
+
+export const CreditGoals = {
+  MORTGAGE: `Ипотечное кредитование`,
+  AUTO: `Автомобильное кредитование`
+};
+
+export const MONTHS_OF_THE_YEAR = 12;
+
+export const ProductSitting = {
+  [CreditGoals.MORTGAGE]: {
+    percent: {
+      salary: 45,
+      border: 15,
+      min: 9.4,
+      max: 8.5
+    },
+    maternalCapital: 450000,
+    minSumOfCredit: 500000,
+    propertyCost: {
+      name: `Стоимость недвижимости`,
+      min: 1200000,
+      max: 25000000,
+      step: 100000,
+      fieldSuffix: ` рублей`
+    },
+    initialFee: {
+      name: `Первоначальный взнос`,
+      min: 10,
+      max: 100,
+      step: 5,
+      rangeSuffix: `%`,
+      fieldSuffix: ` рублей`
+    },
+    creditTerm: {
+      name: `Срок кредитования`,
+      min: 5,
+      max: 30,
+      step: 1,
+      rangeSuffix: `лет`,
+      fieldSuffix: ` лет`
+    },
+    options: [
+      {
+        id: 3,
+        name: `Использовать материнский капитал`,
+        checked: true
+      }
+    ],
+    names: [`ипотеки`, `ипотечные`]
+  },
+  [CreditGoals.AUTO]: {
+    minSumOfCredit: 200000,
+    percent: {
+      salary: 45,
+      border: 2000000,
+      min: 15,
+      max: 16,
+      oneInsurance: 8.5,
+      bothInsurance: 3.5
+    },
+    propertyCost: {
+      name: `Стоимость автомобиля`,
+      min: 500000,
+      max: 5000000,
+      step: 50000,
+      fieldSuffix: ` рублей`
+    },
+    initialFee: {
+      name: `Первоначальный взнос`,
+      min: 20,
+      max: 100,
+      step: 5,
+      rangeSuffix: `%`,
+      fieldSuffix: ` рублей`
+    },
+    creditTerm: {
+      name: `Срок кредитования`,
+      min: 1,
+      max: 5,
+      step: 1,
+      rangeSuffix: `лет`,
+      fieldSuffix: ` лет`
+    },
+    options: [
+      {
+        id: 1,
+        name: `Оформить КАСКО в нашем банке`,
+        checked: true
+      },
+      {
+        id: 2,
+        name: `Оформить Страхование жизни в нашем банке`,
+        checked: true
+      },
+    ],
+    names: [`авто кредит`, `авто`]
+  }
+};

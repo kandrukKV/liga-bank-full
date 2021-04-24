@@ -1,0 +1,70 @@
+@import '../../design-tokens/variables';
+
+.select {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.select__value {
+  position: relative;
+  border: 1px solid $default-text-color;
+  border-radius: 4px;
+  padding: 24px 40px 24px 24px;
+  font-weight: 500;
+}
+
+.select__btn {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: none;
+  background-image: url("../../img/arrov-down.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.select--open .select__btn {
+  background-image: url("../../img/arrov-up.svg");
+}
+
+.select--open .select__options {
+  display: block;
+  border-top: none;
+}
+
+.select--open .select__value {
+  border-radius: 4px 4px 0 0;
+}
+
+.select__options {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid $default-text-color;
+  border-radius: 0 0 4px 4px;
+}
+
+.select__item {
+  padding: 24px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-bg;
+  }
+}
+
+.select__item:not(:first-child) {
+  border-top: 1px solid #C1C2CA;
+}
