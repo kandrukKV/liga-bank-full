@@ -1,6 +1,8 @@
 import React from "react";
 import {YMaps, Map, Placemark, ZoomControl} from "react-yandex-maps";
 import "./branch-map.scss";
+import mark from "../../img/location.svg";
+import {BANK_BRANCH_COORDINATES} from "../../const";
 
 const BranchMap = () => {
 
@@ -16,16 +18,30 @@ const BranchMap = () => {
             }}
             width="100%"
             height="462px"
+            modules={[`templateLayoutFactory`]}
           >
-            <Placemark geometry={[55.755814, 37.617635]} />
-            <Placemark geometry={[51.533557, 46.034257]} />
-            <Placemark geometry={[55.796127, 49.106405]} />
-            <Placemark geometry={[57.152985, 65.541227]} />
-            <ZoomControl options={
-              {
-                position: {left: 10, top: `auto`}
+            {
+              BANK_BRANCH_COORDINATES.map((item, idx) => {
+                return (
+                  <Placemark
+                    key={`label-${idx}`}
+                    geometry={item}
+                    options={{
+                      iconLayout: `default#image`,
+                      iconImageHref: mark,
+                      iconImageSize: [35, 40],
+                      iconContentOffset: [10, 10]
+                    }}
+                  />
+                );
+              })
+            }
+            <ZoomControl options={{
+              position: {
+                right: 20,
+                top: 108
               }
-            } />
+            }} />
           </Map>
         </YMaps>
       </div>

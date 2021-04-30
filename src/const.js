@@ -183,3 +183,5 @@ export const LOCAL_STORAGE_KEY = {
   data: `l_bank_form`,
   user: `i_bank_user`
 };
+
+export const BANK_BRANCH_COORDINATES = [[55.755814, 37.617635], [51.533557, 46.034257], [55.796127, 49.106405], [57.152985, 65.541227]];
