@@ -1,5 +1,9 @@
 @import "../../design-tokens/variables";
 
+.range-slider {
+  padding-left: 6px;
+}
+
 .range-slider__label {
   height: 14px;
   width: 14px;
@@ -8,16 +12,32 @@
 }
 
 .range-slider__scale {
+  position: relative;
   height: 1px;
   width: 100%;
   background-color: #C1C2CA;
 }
 
+.range-slider__scale-label {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707C87;
+}
+
 .range-slider__output {
+  width: 50px;
   position: absolute;
   font-size: 14px;
   line-height: 20px;
   color: #707C87;
+  left: 4px;
   top: 15px;
-  width: 40px;
+}
+
+.range-slider__output--left {
+  left: auto;
+  right: 0;
 }

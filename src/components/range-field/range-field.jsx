@@ -1,5 +1,6 @@
 import React from "react";
 import NumberFormat from "react-number-format";
+import {getPlural} from "../../utils";
 import PropTypes from "prop-types";
 
 import "./range-field.scss";
@@ -12,10 +13,11 @@ const RangeField = (props) => {
     fieldValue,
     rangeValue,
     onChangeFieldValue,
-    onChangeRangeValue
+    onChangeRangeValue,
+    viewMaxLabel
   } = props;
 
-  const {name, min, max, step, rangeSuffix, fieldSuffix} = settings;
+  const {name, min, max, step, rangeSuffixes, fieldSuffixes} = settings;
 
   return (
     <div className="range-field">
@@ -24,7 +26,7 @@ const RangeField = (props) => {
         className="range-field__content"
         thousandSeparator={` `}
         thousandsGroupStyle="thousand"
-        suffix={fieldSuffix}
+        suffix={` ${getPlural(fieldValue, fieldSuffixes)}`}
         value={fieldValue}
         onValueChange={(values) => {
           onChangeFieldValue(values.floatValue);
@@ -35,11 +37,12 @@ const RangeField = (props) => {
         min={min}
         max={max}
         step={step}
-        suffix={rangeSuffix}
+        suffixes={rangeSuffixes}
         values={rangeValue}
         onChangeRange={(values) =>{
           onChangeRangeValue(values);
         }}
+        viewMaxLabel={viewMaxLabel}
       />
     </div>
   );
@@ -52,13 +55,14 @@ RangeField.propTypes = {
     min: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
     step: PropTypes.number.isRequired,
-    rangeSuffix: PropTypes.string.isRequired,
-    fieldSuffix: PropTypes.string.isRequired,
+    rangeSuffixes: PropTypes.array.isRequired,
+    fieldSuffixes: PropTypes.array.isRequired,
   }),
   fieldValue: PropTypes.number,
   rangeValue: PropTypes.array.isRequired,
   onChangeFieldValue: PropTypes.func.isRequired,
-  onChangeRangeValue: PropTypes.func.isRequired
+  onChangeRangeValue: PropTypes.func.isRequired,
+  viewMaxLabel: PropTypes.bool
 };
 
 export default RangeField;

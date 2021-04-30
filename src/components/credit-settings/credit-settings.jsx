@@ -57,6 +57,7 @@ const CreditSettings = (props) => {
           setCreditTerm(value);
         }}
         onChangeRangeValue={(value) => setCreditTerm(value)}
+        viewMaxLabel={true}
       />
 
       <ul className="credit-settings__options">

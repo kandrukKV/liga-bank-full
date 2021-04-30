@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {Range} from 'react-range';
 import "./range-slider.scss";
-
+import {getPlural} from "../../utils";
 const correctRange = (values, min, max) => {
   if (!values[0]) {
     return [min];
@@ -19,7 +19,7 @@ const correctRange = (values, min, max) => {
   return values;
 };
 
-const RangeSlider = ({min, max, step, suffix, values, onChangeRange}) => {
+const RangeSlider = ({min, max, step, suffixes, values, onChangeRange, viewMaxLabel}) => {
 
   const correctValues = correctRange(values, min, max);
 
@@ -39,6 +39,9 @@ const RangeSlider = ({min, max, step, suffix, values, onChangeRange}) => {
             }}
           >
             {children}
+            {
+              viewMaxLabel && correctValues < (max - (max / 20)) ? <span className="range-slider__scale-label">{max} {getPlural(max, suffixes)}</span> : null
+            }
           </div>
         )}
         renderThumb={({props}) => (
@@ -48,8 +51,8 @@ const RangeSlider = ({min, max, step, suffix, values, onChangeRange}) => {
               ...props.style,
             }}
           >
-            <output className="range-slider__output" id="output">
-              {`${correctValues[0].toFixed(0)} ${suffix}`}
+            <output className={`range-slider__output${correctValues[0] > (max / 2) ? ` range-slider__output--left` : ``}`} id="output">
+              {`${correctValues[0]} ${getPlural(correctValues[0], suffixes)}`}
             </output>
           </div>
         )}
@@ -63,9 +66,10 @@ RangeSlider.propTypes = {
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   step: PropTypes.number.isRequired,
-  suffix: PropTypes.string.isRequired,
+  suffixes: PropTypes.array.isRequired,
   values: PropTypes.array,
-  onChangeRange: PropTypes.func.isRequired
+  onChangeRange: PropTypes.func.isRequired,
+  viewMaxLabel: PropTypes.bool
 };
 
 export default RangeSlider;

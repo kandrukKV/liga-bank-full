@@ -8,6 +8,8 @@ import car from "./img/car.jpg";
 import lock from "./img/lock.jpg";
 import phone from "./img/phone_tab.jpg";
 
+export const ESC_KEY = `Escape`;
+
 export const MENU_LIST = [
   {name: `Услуги`, id: 1},
   {name: `Рассчитать кредит`, id: 2},
@@ -80,8 +82,13 @@ export const CreditGoals = {
 
 export const MONTHS_OF_THE_YEAR = 12;
 
+export const NUMBER_OF_DIGITAL = 4;
+
+export const REGULAR_EMAIL = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 export const ProductSitting = {
   [CreditGoals.MORTGAGE]: {
+    purpose: `Ипотека`,
     percent: {
       salary: 45,
       border: 15,
@@ -95,23 +102,23 @@ export const ProductSitting = {
       min: 1200000,
       max: 25000000,
       step: 100000,
-      fieldSuffix: ` рублей`
+      fieldSuffixes: [`рубль`, `рубля`, `рублей`]
     },
     initialFee: {
       name: `Первоначальный взнос`,
       min: 10,
       max: 100,
       step: 5,
-      rangeSuffix: `%`,
-      fieldSuffix: ` рублей`
+      rangeSuffixes: [`%`, `%`, `%`],
+      fieldSuffixes: [`рубль`, `рубля`, `рублей`]
     },
     creditTerm: {
       name: `Срок кредитования`,
       min: 5,
       max: 30,
       step: 1,
-      rangeSuffix: `лет`,
-      fieldSuffix: ` лет`
+      rangeSuffixes: [`год`, `года`, `лет`],
+      fieldSuffixes: [`год`, `года`, `лет`]
     },
     options: [
       {
@@ -123,6 +130,7 @@ export const ProductSitting = {
     names: [`ипотеки`, `ипотечные`]
   },
   [CreditGoals.AUTO]: {
+    purpose: `Авто`,
     minSumOfCredit: 200000,
     percent: {
       salary: 45,
@@ -137,23 +145,23 @@ export const ProductSitting = {
       min: 500000,
       max: 5000000,
       step: 50000,
-      fieldSuffix: ` рублей`
+      fieldSuffixes: [`рубль`, `рубля`, `рублей`]
     },
     initialFee: {
       name: `Первоначальный взнос`,
       min: 20,
       max: 100,
       step: 5,
-      rangeSuffix: `%`,
-      fieldSuffix: ` рублей`
+      rangeSuffixes: [`%`, `%`, `%`],
+      fieldSuffixes: [`рубль`, `рубля`, `рублей`]
     },
     creditTerm: {
       name: `Срок кредитования`,
       min: 1,
       max: 5,
       step: 1,
-      rangeSuffix: `лет`,
-      fieldSuffix: ` лет`
+      rangeSuffixes: [`год`, `года`, `лет`],
+      fieldSuffixes: [`год`, `года`, `лет`]
     },
     options: [
       {
@@ -169,4 +177,9 @@ export const ProductSitting = {
     ],
     names: [`авто кредит`, `авто`]
   }
+};
+
+export const LOCAL_STORAGE_KEY = {
+  data: `l_bank_form`,
+  user: `i_bank_user`
 };

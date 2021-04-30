@@ -1,6 +1,7 @@
 import {ActionTypes} from "./actions";
 
 const initialState = {
+  currentNumberOfOffer: 1,
   calc: {
     purposeValue: null,
     propertyCost: 0,
@@ -58,6 +59,11 @@ export const reducer = (state = initialState, action) => {
             ...options.slice(index + 1)
           ]
         }
+      };
+    case ActionTypes.INC_CURRENT_NUMBER_OF_OFFER:
+      return {
+        ...state,
+        currentNumberOfOffer: state.currentNumberOfOffer + 1
       };
     default:
       return state;

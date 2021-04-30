@@ -1,0 +1,93 @@
+@import "../../design-tokens/variables";
+
+.login-form {
+  padding: 30px 0 0 0;
+  width: 475px;
+}
+
+.login-form__top {
+  margin-bottom: 45px;
+}
+
+.login-form__label {
+  display: block;
+  margin-bottom: 10px;
+  color: #394959;
+}
+.login-form__input-wrap {
+  position: relative;
+}
+
+.login-form__input {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 18px;
+  color: #707C87;
+  border: 1px solid #0A1E32;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.login-form__wrap {
+  margin-bottom: 30px;
+}
+
+.login-form__service {
+  margin: 10px 0 0 0;
+  text-align: right;
+}
+
+.login-form__service--error {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "Все поля обязательны для заполнения!";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: crimson;
+    font-size: 10px;
+  }
+}
+
+.login-form__link {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 17px;
+  color: #707C87;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.login-form__input-inner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.login-form__btn {
+  padding: 24px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: $blue-bg;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 21px;
+  color: $gray-bg;
+  border-radius: 4px;
+}

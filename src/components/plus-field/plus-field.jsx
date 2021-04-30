@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import NumberFormat from "react-number-format";
+import {getPlural} from "../../utils";
 import PropTypes from "prop-types";
 import "./plus-field.scss";
 
 const PlusField = ({propertyCost, onChangePropertyCost, settings}) => {
 
-  const {name, min, max, step, fieldSuffix} = settings;
+  const {name, min, max, step, fieldSuffixes} = settings;
   const [isError, setIsError] = useState(false);
 
   const setFormErrorHandler = (value) => (value < min) || (value > max) ? setIsError(true) : setIsError(false);
@@ -29,7 +30,7 @@ const PlusField = ({propertyCost, onChangePropertyCost, settings}) => {
           className="plus-field__content"
           thousandSeparator={` `}
           thousandsGroupStyle="thousand"
-          suffix={fieldSuffix}
+          suffix={` ${getPlural(propertyCost, fieldSuffixes)}`}
           value={propertyCost}
           onValueChange={(values) => {
             onChangePropertyCost(values.floatValue);
@@ -48,7 +49,7 @@ const PlusField = ({propertyCost, onChangePropertyCost, settings}) => {
           <span className="visually-hidden">+</span>
         </button>
       </div>
-      <div className="plus-field__info">{`От ${min.toLocaleString()} до ${max.toLocaleString()}`}</div>
+      <div className="plus-field__info">{`От ${min.toLocaleString()} до ${max.toLocaleString()} рублей`}</div>
     </div>
   );
 };
@@ -61,7 +62,7 @@ PlusField.propTypes = {
     max: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     step: PropTypes.number.isRequired,
-    fieldSuffix: PropTypes.string.isRequired,
+    fieldSuffixes: PropTypes.array.isRequired,
   }).isRequired
 };
 

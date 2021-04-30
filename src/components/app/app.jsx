@@ -9,6 +9,7 @@ import Footer from "../footer/footer";
 import Slider from "../slider/slider";
 import Tabs from "../tabs/tabs";
 import Calculator from "../calculator/calculator";
+import BranchMap from "../map/branch-map";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Slider/>
       <Tabs/>
       <Calculator/>
+      <BranchMap/>
       <Footer/>
 
     </div>

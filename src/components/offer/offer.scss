@@ -1,7 +1,8 @@
 @import "../../design-tokens/variables";
 
 .offer {
-  padding: 60px;
+  margin-top: 5px;
+  padding: 54px 60px 60px 60px;
   background-color: $gray-bg;
   width: 100%;
   max-width: 500px;
@@ -12,7 +13,7 @@
   font-size: 22px;
   line-height: 31px;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 23px;
 }
 
 .offer__list {
@@ -24,15 +25,19 @@
 }
 
 .offer__item {
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   width: 50%;
 }
 
 .offer__value {
-  margin: 0 0 15px 0;
+  margin: 0 0 3px 0;
   font-weight: 500;
   font-size: 22px;
   line-height: 31px;
+}
+
+.offer__item:nth-child(even) {
+  padding-left: 35px;
 }
 
 .offer__name {
@@ -44,7 +49,8 @@
 
 .offer__btn {
   width: 100%;
-  padding: 20px;
+  padding: 16px;
+  margin-top: 5px;
   text-align: center;
   display: block;
   cursor: pointer;
@@ -53,6 +59,8 @@
   border-radius: 4px;
   border: none;
   color: $gray-bg;
+  font-size: 16px;
+  line-height: 22px;
 
   &:hover {
     opacity: 0.7;

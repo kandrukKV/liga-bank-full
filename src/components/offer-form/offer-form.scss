@@ -1,0 +1,107 @@
+@import "../../design-tokens/variables";
+
+.offer-form {
+  padding: 62px 70px 70px 70px;
+  max-width: 770px;
+  margin: 0 auto;
+  background-color: $gray-bg;
+}
+
+.offer-form__title {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  line-height: 31px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.offer-form__list {
+  padding: 0;
+  margin: 0 0 30px 0;
+  list-style: none;
+}
+
+.offer-form__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.offer-form__key {
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959;
+}
+
+.offer-form__value {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.offer-form__input-name {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 18px;
+  color: #707C87;
+  border: 1px solid #0A1E32;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.offer-form__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.offer-form__input-phone {
+  width: 100%;
+  max-width: 300px;
+  padding: 19px 24px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #707C87;
+  border: 1px solid #0A1E32;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.offer-form__wrap-btn {
+  padding-top: 8px;
+  text-align: center;
+}
+
+.offer-form__btn {
+  padding: 17px 58px;
+  background: $blue-bg;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $gray-bg;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: auto;
+  }
+}
+
+.offer-form__error-field {
+  margin-top: -20px;
+  margin-bottom: 4px;
+  text-align: center;
+  color: crimson;
+  font-size: 14px;
+  font-weight: 500;
+}

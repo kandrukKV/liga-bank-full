@@ -4,7 +4,8 @@ export const ActionTypes = {
   SET_PROPERTY_COST: `SET_PROPERTY_COST`,
   SET_INITIAL_FEE: `SET_INITIAL_FEE`,
   SET_CREDIT_TERM: `SET_CREDIT_TERM`,
-  CHECK_OPTION: `CHECK_OPTION`
+  CHECK_OPTION: `CHECK_OPTION`,
+  INC_CURRENT_NUMBER_OF_OFFER: `INC_CURRENT_NUMBER_OF_OFFER`
 };
 
 export const setInitialValuesAction = (values) => ({
@@ -36,4 +37,8 @@ export const setCreditTermAction = (value) => ({
 export const checkOptionAction = (value) => ({
   type: ActionTypes.CHECK_OPTION,
   payload: value
+});
+
+export const incCurrentNumberOfOfferAction = () => ({
+  type: ActionTypes.INC_CURRENT_NUMBER_OF_OFFER
 });
