@@ -43,7 +43,7 @@ const Calculator = (props) => {
   const [modalIsActive, setModalIsActive] = useState(false);
 
   return (
-    <section className="calculator theme-container">
+    <section id="calculator" className="calculator theme-container">
       <h2 className="calculator__head">Кредитный калькулятор</h2>
       <div className="calculator__wrap">
         <div className="calculator__params">

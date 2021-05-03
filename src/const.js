@@ -36,7 +36,7 @@ export const TABS = [
     title: `Лига Банк выдает кредиты под любые цели`,
     listItems: [`Ипотечный кредит`, `Автокредит`, `Потребительский кредит`],
     decorImg: car,
-    link: <>Рассчитайте ежемесячный платеж и ставку по кредиту воспользовавшись нашим <a className="tab__link" href="#">кредитным калькулятором</a></>
+    link: <>Рассчитайте ежемесячный платеж и ставку по кредиту воспользовавшись нашим <a className="tab__link" href="#calculator">кредитным калькулятором</a></>
   },
 
   {
@@ -58,18 +58,21 @@ export const SLIDES = [
   {
     subtitle: `Кредиты на любой случай`,
     linkName: `Рассчитать кредит`,
+    link: `#calculator`,
     isWhite: true,
     background: `first`
   },
   {
     subtitle: `Ваша уверенность в завтрашнем дне`,
     linkName: `Рассчитать кредит`,
+    link: `#calculator`,
     isWhite: false,
     background: `second`
   },
   {
     subtitle: `Всегда радом`,
     linkName: `Найти отделение`,
+    link: `#map`,
     isWhite: false,
     background: `third`
   }

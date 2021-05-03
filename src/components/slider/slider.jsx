@@ -27,7 +27,7 @@ const Slider = () => {
                 <div className="theme-container slider__inner">
                   <h2 className={`slider__title${slide.isWhite ? ` slider__title--white` : ``}`}>Лига Банк</h2>
                   <p className={`slider__subtitle${slide.isWhite ? ` slider__subtitle--white` : ``}`}>{slide.subtitle}</p>
-                  <a className={`slider__button${slide.isWhite ? ` slider__button--white` : ``}`} href="#">{slide.linkName}</a>
+                  <a className={`slider__button${slide.isWhite ? ` slider__button--white` : ``}`} href={`${slide.link}`}>{slide.linkName}</a>
                 </div>
               </div>
             </SwiperSlide>
