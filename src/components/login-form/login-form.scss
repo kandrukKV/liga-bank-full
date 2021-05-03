@@ -91,3 +91,9 @@
   color: $gray-bg;
   border-radius: 4px;
 }
+
+@media (max-width: $mobile-width) {
+  .login-form {
+    width: 100%;
+  }
+}

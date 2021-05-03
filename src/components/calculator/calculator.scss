@@ -1,3 +1,5 @@
+@import "../../design-tokens/variables";
+
 .calculator {
   padding-top: 37px;
 }
@@ -45,4 +47,52 @@
   font-size: 16px;
   line-height: 22px;
   color: #394959;
+}
+
+@media (max-width: $tablet-width) {
+  .calculator {
+    padding-top: 68px;
+  }
+
+  .calculator__head {
+    margin: 0 0 26px 0;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .calculator__subhead {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 19px;
+  }
+
+  .calculator__wrap {
+    flex-wrap: wrap;
+  }
+
+  .calculator__params {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .calculator {
+    padding-top: 33px;
+  }
+
+  .calculator__head {
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 22px;
+  }
+
+  .calculator__subhead {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+
+  .calculator__wrap {
+    margin-bottom: 43px;
+  }
 }

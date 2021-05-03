@@ -7,17 +7,17 @@ import {BANK_BRANCH_COORDINATES} from "../../const";
 const BranchMap = () => {
 
   return (
-    <div className="map theme-container">
-      <h2 className="map__header">Отделения Лига Банка</h2>
-      <div className="map__container">
+    <div className="branch-map">
+      <h2 className="branch-map__header theme-container">Отделения Лига Банка</h2>
+      <div className="branch-map__container">
         <YMaps>
           <Map
             defaultState={{
               center: [56.753186, 61.647057],
               zoom: 5,
             }}
+            className="branch-map__wrapper"
             width="100%"
-            height="462px"
             modules={[`templateLayoutFactory`]}
           >
             {

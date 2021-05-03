@@ -68,3 +68,27 @@
 .select__item:not(:first-child) {
   border-top: 1px solid #C1C2CA;
 }
+
+@media (max-width: $tablet-width) {
+  .select {
+    max-width: 100%;
+  }
+
+  .select__value {
+    padding: 23px 40px 19px 23px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .select {
+    margin-bottom: 25px;
+  }
+
+  .select__value {
+    padding: 23px 36px 19px 14px;
+  }
+
+  .select__btn {
+    right: 14px;
+  }
+}

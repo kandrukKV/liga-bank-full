@@ -105,3 +105,92 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+@media (max-width: $tablet-width) {
+  .offer-form {
+    background-color: #FFFFFF;
+    padding: 0;
+  }
+
+  .offer-form__title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 27px;
+  }
+
+  .offer-form__item {
+    padding-bottom: 12px;
+  }
+
+  .offer-form__input-name {
+    padding: 18px 24px;
+  }
+
+  .offer-form__input-phone {
+    max-width: 324px;
+  }
+
+  .offer-form__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .offer-form__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .offer-form__item {
+    flex-wrap: wrap;
+    padding: 14px 0;
+  }
+
+  .offer-form__key {
+    width: 100%;
+    order: 2;
+  }
+
+  .offer-form__value {
+    width: 100%;
+    order: 1;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .offer-form__input-name {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 18px 14px;
+  }
+
+  .offer-form__wrap {
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+  }
+
+  .offer-form__input-phone {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 18px 14px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .offer-form__wrap-btn {
+    padding: 0;
+    margin-top: -10px;
+  }
+
+  .offer-form__btn {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .offer-form__error-field {
+    font-size: 14px;
+    margin-top: -30px;
+    margin-bottom: 18px;
+  }
+}

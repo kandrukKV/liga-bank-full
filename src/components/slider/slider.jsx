@@ -13,6 +13,9 @@ const Slider = () => {
   const sliderParams = {
     pagination: true,
     loop: true,
+    autoplay: {
+      delay: 4000,
+    }
   };
   return (
     <Swiper {...sliderParams}>

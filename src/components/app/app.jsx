@@ -9,7 +9,7 @@ import Footer from "../footer/footer";
 import Slider from "../slider/slider";
 import Tabs from "../tabs/tabs";
 import Calculator from "../calculator/calculator";
-import BranchMap from "../map/branch-map";
+import BranchMap from "../branch-map/branch-map";
 
 const App = () => {
   return (

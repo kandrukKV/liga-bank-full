@@ -1,0 +1,66 @@
+@import "../../design-tokens/variables";
+
+.branch-map {
+  padding-top:98px;
+  padding-bottom: 110px;
+}
+
+.branch-map__header {
+  margin-top: 0;
+  margin-bottom: 54px;
+  font-size: 41px;
+  line-height: 57px;
+}
+
+.branch-map__container {
+  padding: 0 15px;
+  width: 100%;
+  min-height: 462px;
+  background-image: url("../../img/map-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-clip: content-box;
+}
+
+.branch-map__wrapper {
+  flex: 1;
+}
+
+@media (max-width: $tablet-width) {
+  .branch-map {
+    padding-top: 69px;
+    padding-bottom: 80px;
+  }
+
+  .branch-map__header {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 33px;
+  }
+
+  .branch-map__container {
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .branch-map {
+    padding-top: 51px;
+    padding-bottom: 61px;
+  }
+
+  .branch-map__header {
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 26px;
+  }
+
+  .branch-map__container {
+    min-height: 381px;
+    padding: 0;
+  }
+}
+

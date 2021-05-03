@@ -21,7 +21,7 @@ const Footer = () => {
           <li className="footer__nav-item"><a href="#">Контакты</a></li>
           <li className="footer__nav-item"><a href="#">Задать вопрос</a></li>
         </ul>
-        <div className="footer__phone footer__service">
+        <div className="footer__phone footer__phone--service">
           <svg className="footer__phone-img" width="10" height="16">
             <use href={sprites + `#phone-one` }/>
           </svg>
@@ -29,8 +29,8 @@ const Footer = () => {
           <p className="footer__desc">Бесплатно для абонентов</p>
           <p className="footer__desc">МТС, Билайн, Мегафон, Теле2</p>
         </div>
-        <div className="footer__phone footer__mobile">
-          <svg className="footer__phone-img" width="16" height="16">
+        <div className="footer__phone footer__phone--mobile">
+          <svg className="footer__phone-img footer__phone-img--mobile" width="16" height="16">
             <use href={sprites + `#phone-two` }/>
           </svg>
           <p className="footer__number">8 800 111 22 33</p>

@@ -44,3 +44,28 @@
     background-size: contain;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .credit-settings__subhead {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 13px;
+  }
+
+  .credit-settings__label {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .credit-settings__subhead {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 9px;
+  }
+
+  .credit-settings__label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

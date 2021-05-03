@@ -13,6 +13,10 @@
 
 .nav__item {
   margin-right: 25px;
+
+  &:last-child {
+    display: none;
+  }
 }
 
 .nav__link {
@@ -22,6 +26,22 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+.nav__icon {
+  margin-right: 5px;
+  width: 20px;
+  height: 22px;
+}
+
+.nav__login-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 @media (max-width: $tablet-width){
@@ -40,6 +60,37 @@
 
 @media (max-width: $mobile-width){
   .nav {
-    display: none;
+    position: absolute;
+    padding: 0 15px;
+    top: 42px;
+    left: -100%;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    transition: left .5s;
+  }
+
+  .header--nav-open .nav {
+    left: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__item {
+    margin: 0;
+    padding: 25px 30px;
+    border-bottom: 1px solid #C1C2CA;
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  .nav__link {
+    font-size: 16px;
+    line-height: 19px;
   }
 }

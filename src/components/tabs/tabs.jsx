@@ -21,8 +21,10 @@ const Tabs = () => {
 
   const tabsParams = {
     thumbs: {swiper: thumbsSwiper},
+    pagination: true,
+    effect: `slide`,
     breakpoints: {
-      1023: {
+      1024: {
         pagination: false,
         effect: `fade`,
       },

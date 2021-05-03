@@ -15,7 +15,7 @@ const Tab = (props) => {
         </ul>
         <div className="tab__bottom">{renderLink}</div>
       </div>
-      <div className="tab__img" style={{backgroundImage: `url("${decorImg}")`, height: 290}}/>
+      <div className="tab__img" style={{backgroundImage: `url("${decorImg}")`}}/>
     </div>
   );
 };

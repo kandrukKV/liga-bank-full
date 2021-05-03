@@ -1,13 +1,16 @@
 @import '../../design-tokens/variables';
 
 .tab {
-  padding: 53px 70px;
+  position: relative;
+  padding: 53px 70px 53px 70px;
   display: flex;
   background-color: $gray-bg;
   min-height: 410px;
 }
 
 .tab__text {
+  position: relative;
+  z-index: 3;
   width: 50%;
 }
 
@@ -77,8 +80,12 @@
 }
 
 .tab__img {
-  width: 50%;
-  height: auto;
+  position: absolute;
+  z-index: 2;
+  right: 135px;
+  top: 60px;
+  width: 440px;
+  height: 290px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -89,6 +96,19 @@
     width: 100%;
     padding-left: 45px;
     padding-right: 45px;
+    padding-bottom: 58px;
+    min-height: 380px;
+  }
+
+  .tab__text {
+    width: 64%;
+  }
+
+  .tab__img {
+    width: 289px;
+    height: 260px;
+    right: 45px;
+    background-position: -100px 0;
   }
 
   .tab__title {
@@ -99,5 +119,83 @@
   .tab__item {
     font-size: 16px;
     line-height: 21px;
+    max-width: 100%;
+  }
+
+  .tab__list {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tab {
+    padding: 55px 15px 50px 15px;
+    position: relative;
+    min-height: 362px;
+  }
+
+  .tab__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .tab__text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .tab__item {
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    max-width: 85%;
+
+    &::before {
+      width: 8px;
+      height: 6px;
+    }
+  }
+
+  .tab__img {
+    width: 87px;
+    height: 113px;
+    top: 98px;
+    right: 0;
+  }
+
+  .swiper-slide:nth-child(1) .tab__img{
+    background-position: -122px -49px;
+    background-size: auto 144%;
+  }
+
+  .swiper-slide:nth-child(2) .tab__img{
+    background-position: -37px 0px;
+    background-size: auto 110%;
+  }
+
+  .swiper-slide:nth-child(3) .tab__img{
+    background-position: -37px 0px;
+    background-size: auto 90%;
+  }
+
+  .swiper-slide:nth-child(4) .tab__img{
+    background-position: -31px 0px;
+    background-size: auto 90%;
+  }
+
+  .tab__bottom {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tab__btn {
+    max-width: 100%;
+    padding: 14px 30px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
