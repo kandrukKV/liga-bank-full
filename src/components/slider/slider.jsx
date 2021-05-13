@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, {Pagination, Autoplay} from 'swiper';
-import {SLIDES} from '../../const';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/swiper.scss';
-import './slider.scss';
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Pagination, Autoplay} from "swiper";
+import {SLIDES} from "../../const";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/swiper.scss";
+import "./slider.scss";
 
 SwiperCore.use([Pagination, Autoplay]);
 

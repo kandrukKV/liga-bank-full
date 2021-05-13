@@ -4,7 +4,7 @@ import "./modal.scss";
 
 import {ESC_KEY} from "../../const";
 
-const Modal = ({setIsOpen, children, addClass = ``}) => {
+const Modal = ({setIsOpen, children, addClass}) => {
 
   const escKeydownListener = (evt) => {
     if (evt.key === ESC_KEY) {
@@ -37,6 +37,10 @@ const Modal = ({setIsOpen, children, addClass = ``}) => {
       </div>
     </div>
   );
+};
+
+Modal.defaultProps = {
+  addClass: ``
 };
 
 Modal.propTypes = {

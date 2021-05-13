@@ -16,6 +16,11 @@
 .modal--active {
   display: flex;
 }
+
+.modal--header .modal__content {
+  border: 4px solid $blue-bg;
+}
+
 .modal__content {
   position: relative;
   padding: 30px 35px 35px 35px;

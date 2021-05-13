@@ -1,6 +1,7 @@
 import React, {Fragment} from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
+import propSettings from "./credit-settings.prop";
 import "./credit-settings.scss";
 import PlusField from "../plus-field/plus-field";
 import RangeField from "../range-field/range-field";
@@ -113,7 +114,7 @@ CreditSettings.propTypes = {
   setInitialFee: PropTypes.func.isRequired,
   setCreditTerm: PropTypes.func.isRequired,
   checkOption: PropTypes.func.isRequired,
-  settings: PropTypes.object.isRequired,
+  settings: propSettings,
   options: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,

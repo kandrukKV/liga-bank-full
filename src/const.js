@@ -98,7 +98,7 @@ export const ProductSitting = {
       min: 9.4,
       max: 8.5
     },
-    maternalCapital: 450000,
+    maternalCapital: 470000,
     minSumOfCredit: 500000,
     propertyCost: {
       name: `Стоимость недвижимости`,

@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
-import {Range} from 'react-range';
+import {Range} from "react-range";
 import "./range-slider.scss";
 import {getPlural} from "../../utils";
+
 const correctRange = (values, min, max) => {
   if (!values[0]) {
     return [min];
@@ -66,8 +67,8 @@ RangeSlider.propTypes = {
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   step: PropTypes.number.isRequired,
-  suffixes: PropTypes.array.isRequired,
-  values: PropTypes.array,
+  suffixes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  values: PropTypes.arrayOf(PropTypes.number),
   onChangeRange: PropTypes.func.isRequired,
   viewMaxLabel: PropTypes.bool
 };

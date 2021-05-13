@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import sprite from '../../img/header-sprites.svg';
-import './nav.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import sprite from "../../img/header-sprites.svg";
+import "./nav.scss";
 
 const Nav = ({menuList, onLoginBtnClick}) => {
   return (

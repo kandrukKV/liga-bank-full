@@ -51,12 +51,12 @@ const RangeField = (props) => {
 
 RangeField.propTypes = {
   settings: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    min: PropTypes.number.isRequired,
-    max: PropTypes.number.isRequired,
-    step: PropTypes.number.isRequired,
-    rangeSuffixes: PropTypes.array.isRequired,
-    fieldSuffixes: PropTypes.array.isRequired,
+    name: PropTypes.string,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    rangeSuffixes: PropTypes.arrayOf(PropTypes.string),
+    fieldSuffixes: PropTypes.arrayOf(PropTypes.string)
   }),
   fieldValue: PropTypes.number,
   rangeValue: PropTypes.array.isRequired,

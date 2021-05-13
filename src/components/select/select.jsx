@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import PropTypes from "prop-types";
 import {CreditGoals} from "../../const";
-import './select.scss';
+import "./select.scss";
 
 const Select = ({value, changeValue}) => {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
@@ -13,13 +13,13 @@ const Select = ({value, changeValue}) => {
   };
 
   return (
-    <div className={`select${isSelectOpen ? ` select--open` : ``}`}>
+    <div
+      className={`select${isSelectOpen ? ` select--open` : ``}`}
+      onClick={() => setIsSelectOpen((current) => !current)}
+    >
       <div className="select__value">
         <span>{!value ? `Выберите цель кредита` : value}</span>
-        <button
-          className="select__btn"
-          onClick={() => setIsSelectOpen((current) => !current)}
-        >
+        <button className="select__btn">
           <span className="visually-hidden">Кнопка</span>
         </button>
       </div>

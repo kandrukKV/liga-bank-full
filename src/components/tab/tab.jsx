@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './tab.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import "./tab.scss";
 
 const Tab = (props) => {
   const {title, listItems, decorImg, renderLink} = props;
@@ -24,7 +24,7 @@ Tab.propTypes = {
   title: PropTypes.string.isRequired,
   listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
   decorImg: PropTypes.string.isRequired,
-  renderLink: PropTypes.object.isRequired
+  renderLink: PropTypes.node.isRequired
 };
 
 export default Tab;

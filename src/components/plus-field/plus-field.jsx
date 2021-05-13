@@ -58,11 +58,11 @@ PlusField.propTypes = {
   propertyCost: PropTypes.number.isRequired,
   onChangePropertyCost: PropTypes.func.isRequired,
   settings: PropTypes.shape({
-    min: PropTypes.number.isRequired,
-    max: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    step: PropTypes.number.isRequired,
-    fieldSuffixes: PropTypes.array.isRequired,
+    name: PropTypes.string,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    fieldSuffixes: PropTypes.arrayOf(PropTypes.string)
   }).isRequired
 };
 

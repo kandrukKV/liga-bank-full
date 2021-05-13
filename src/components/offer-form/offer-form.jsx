@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import PropTypes from "prop-types";
+import propSettings from "../credit-settings/credit-settings.prop";
 import NumberFormat from "react-number-format";
 import {getPlural, addZero, isFormValidation} from "../../utils";
 import {NUMBER_OF_DIGITAL, LOCAL_STORAGE_KEY} from "../../const";
@@ -130,7 +131,7 @@ const OfferForm = ({settings, propertyCost, initialFee, creditTerm, numberOfOffe
 };
 
 OfferForm.propTypes = {
-  settings: PropTypes.object,
+  settings: propSettings,
   propertyCost: PropTypes.number,
   numberOfOffer: PropTypes.number,
   initialFee: PropTypes.number,

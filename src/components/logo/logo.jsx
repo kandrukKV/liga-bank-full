@@ -1,8 +1,8 @@
-import React from 'react';
-import './logo.scss';
-import PropTypes from 'prop-types';
-import logoImg from '../../img/logo.svg';
-import logoLabel from '../../img/logo-text.svg';
+import React from "react";
+import "./logo.scss";
+import PropTypes from "prop-types";
+import logoImg from "../../img/logo.svg";
+import logoLabel from "../../img/logo-text.svg";
 
 const Logo = ({isWithText = false}) => {
 

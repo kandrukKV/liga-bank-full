@@ -59,7 +59,7 @@ Offer.propTypes = {
   monthlyPay: PropTypes.number,
   salary: PropTypes.number,
   minSumOfCredit: PropTypes.number,
-  names: PropTypes.array,
+  names: PropTypes.arrayOf(PropTypes.string).isRequired,
   onBtnClick: PropTypes.func.isRequired
 };
 

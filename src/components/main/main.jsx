@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './main.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import "./main.scss";
 
 const Main = ({mainTitle, children}) => {
 
@@ -14,7 +14,7 @@ const Main = ({mainTitle, children}) => {
 
 Main.propTypes = {
   mainTitle: PropTypes.string.isRequired,
-  children: PropTypes.array
+  children: PropTypes.arrayOf(PropTypes.element).isRequired
 };
 
 export default Main;

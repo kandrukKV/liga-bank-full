@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import Logo from '../logo/logo';
-import './header.scss';
+import React, {useState} from "react";
+import Logo from "../logo/logo";
+import "./header.scss";
 import Nav from "../nav/nav";
-import {MENU_LIST} from '../../const';
-import sprite from '../../img/header-sprites.svg';
+import {MENU_LIST} from "../../const";
+import sprite from "../../img/header-sprites.svg";
 import Modal from "../modal/modal";
 import LoginForm from "../login-form/login-form";
 
@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       {
         isLoginModalOpen &&
-        <Modal setIsOpen={setIsLoginModalOpen} addClass="header__modal">
+        <Modal setIsOpen={setIsLoginModalOpen} addClass="modal--header">
           <LoginForm closeForm={() => setIsLoginModalOpen(false)}/>
         </Modal>
       }

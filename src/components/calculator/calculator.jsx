@@ -139,7 +139,11 @@ Calculator.propTypes = {
   propertyCost: PropTypes.number,
   initialFee: PropTypes.number,
   creditTerm: PropTypes.number,
-  options: PropTypes.array,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    checked: PropTypes.bool
+  })),
   setPurposeValue: PropTypes.func.isRequired,
   setInitialValues: PropTypes.func.isRequired,
   incCurrentNumberOfOffer: PropTypes.func.isRequired,

@@ -1,6 +1,6 @@
-import React from 'react';
-import './footer.scss';
-import sprites from '../../img/footer-sprites.svg';
+import React from "react";
+import "./footer.scss";
+import sprites from "../../img/footer-sprites.svg";
 import Logo from "../logo/logo";
 
 const Footer = () => {
@@ -25,7 +25,7 @@ const Footer = () => {
           <svg className="footer__phone-img" width="10" height="16">
             <use href={sprites + `#phone-one` }/>
           </svg>
-          <p className="footer__number">*0904</p>
+          <a className="footer__number" href="tel:*0904">*0904</a>
           <p className="footer__desc">Бесплатно для абонентов</p>
           <p className="footer__desc">МТС, Билайн, Мегафон, Теле2</p>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <svg className="footer__phone-img footer__phone-img--mobile" width="16" height="16">
             <use href={sprites + `#phone-two` }/>
           </svg>
-          <p className="footer__number">8 800 111 22 33</p>
+          <a className="footer__number" href="tel:88001112233">8 800 111 22 33</a>
           <p className="footer__desc">Бесплатный для всех</p>
           <p className="footer__desc">городов России</p>
         </div>

@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import React, {useState} from "react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Thumbs, Pagination, Navigation, EffectFade} from "swiper/core";
-import Tab from '../tab/tab';
+import Tab from "../tab/tab";
 import {THUMBS, TABS} from "../../const";
 
-import 'swiper/swiper.scss';
-import 'swiper/components/effect-fade/effect-fade.scss';
-import 'swiper/components/pagination/pagination.scss';
+import "swiper/swiper.scss";
+import "swiper/components/effect-fade/effect-fade.scss";
+import "swiper/components/pagination/pagination.scss";
 
-import './tabs.scss';
+import "./tabs.scss";
 
 SwiperCore.use([Thumbs, Pagination, Navigation, EffectFade]);
 
