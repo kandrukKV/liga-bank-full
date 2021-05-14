@@ -1,6 +1,6 @@
 @import '../../design-tokens/variables';
 
-.slider__slide {
+.slider {
   min-height: 400px;
   width: 100%;
   background-position: center center;
@@ -8,15 +8,15 @@
   background-repeat: no-repeat;
 }
 
-.slider__slide--first {
+.slider--first {
   background-image: url("../../img/slide-bg-1.jpg");
 }
 
-.slider__slide--second {
+.slider--second {
   background-image: url("../../img/slide-bg-2.jpg");
 }
 
-.slider__slide--third {
+.slider--third {
   background-image: url("../../img/slide-bg-3.jpg");
 }
 
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: $tablet-width) {
-  .slider__slide {
+  .slider {
     min-height: 300px;
   }
 
@@ -117,7 +117,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .slider__slide {
+  .slider {
     min-height: 226px;
   }
 
@@ -145,17 +145,17 @@
     line-height: 16px;
   }
 
-  .slider__slide--first {
+  .slider--first {
     background-position: -294px -55px;
     background-size: auto 131%;
   }
 
-  .slider__slide--second {
+  .slider--second {
     background-position: -357px -16px;
     background-size: auto 110%;
   }
 
-  .slider__slide--third {
+  .slider--third {
     background-position: -288px 0px;
     background-size: auto 100%;
   }

@@ -23,7 +23,7 @@ const Slider = () => {
         SLIDES.map((slide) => {
           return (
             <SwiperSlide key={slide.subtitle}>
-              <div className={`slider__slide slider__slide--${slide.background}`}>
+              <div className={`slider slider--${slide.background}`}>
                 <div className="theme-container slider__inner">
                   <h2 className={`slider__title${slide.isWhite ? ` slider__title--white` : ``}`}>Лига Банк</h2>
                   <p className={`slider__subtitle${slide.isWhite ? ` slider__subtitle--white` : ``}`}>{slide.subtitle}</p>
