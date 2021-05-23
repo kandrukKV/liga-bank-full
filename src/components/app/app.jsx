@@ -15,9 +15,9 @@ const App = () => {
   return (
     <div className="app">
       <Helmet>
-        <link rel="preload" href={robotoRegular} as="font" type="font/woff2"/>
-        <link rel="preload" href={robotoMedium} as="font" type="font/woff2"/>
-        <link rel="preload" href={robotoBold} as="font" type="font/woff2"/>
+        <link rel="preload" href={robotoRegular} as="font" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" href={robotoMedium} as="font" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" href={robotoBold} as="font" type="font/woff2" crossOrigin="anonymous"/>
       </Helmet>
       <Header/>
       <Slider/>

@@ -70,7 +70,6 @@ const Footer = () => {
               </svg>
             </a>
           </li>
-
         </ul>
       </div>
     </footer>

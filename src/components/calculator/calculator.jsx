@@ -11,8 +11,13 @@ import CreditSettings from "../credit-settings/credit-settings";
 import OfferForm from "../offer-form/offer-form";
 import {calcCreditParams} from "../../utils";
 import Modal from "../modal/modal";
+import classNames from "classnames";
 
 const Calculator = (props) => {
+  const [isOpenOfferForm, setIsOpenOfferForm] = useState(false);
+  const [modalIsActive, setModalIsActive] = useState(false);
+  const [isCalcError, setIsCalcError] = useState(false);
+
   const {
     currentNumberOfOffer,
     purposeValue,
@@ -31,7 +36,16 @@ const Calculator = (props) => {
   let salary = 0;
   let settings = null;
 
-  if (purposeValue) {
+  const isStepTwo = !!purposeValue;
+  const isStepThree = isOpenOfferForm && isStepTwo;
+
+  const calcClasses = classNames(
+      `calculator`,
+      `theme-container`,
+      {'calculator--step-two': isStepTwo && !isStepThree, 'calculator--step-three': isStepThree}
+  );
+
+  if (isStepTwo) {
     settings = ProductSitting[purposeValue];
     creditSum = calcCreditParams[purposeValue].calcCreditSum(propertyCost, initialFee, options, settings);
     creditPercent = calcCreditParams[purposeValue].calcCreditPercent(propertyCost, options, initialFee, settings);
@@ -39,11 +53,8 @@ const Calculator = (props) => {
     salary = calcCreditParams[purposeValue].calcSalary(settings, monthlyPay);
   }
 
-  const [isOpenOfferForm, setIsOpenOfferForm] = useState(false);
-  const [modalIsActive, setModalIsActive] = useState(false);
-
   return (
-    <section id="calculator" className="calculator theme-container">
+    <section id="calculator" className={calcClasses}>
       <h2 className="calculator__head">Кредитный калькулятор</h2>
       <div className="calculator__wrap">
         <div className="calculator__params">
@@ -61,15 +72,16 @@ const Calculator = (props) => {
             }}
           />
           {
-            purposeValue &&
+            isStepTwo &&
               <CreditSettings
                 purposeValue={purposeValue}
                 settings={ProductSitting[purposeValue]}
+                setIsCalcError={setIsCalcError}
               />
           }
         </div>
         {
-          purposeValue &&
+          isStepTwo && !isCalcError &&
             <Offer
               creditSum={creditSum}
               creditPercent={creditPercent}
@@ -82,7 +94,7 @@ const Calculator = (props) => {
         }
       </div>
       {
-        isOpenOfferForm && purposeValue &&
+        isStepThree &&
           <OfferForm
             settings={ProductSitting[purposeValue]}
             propertyCost={propertyCost}

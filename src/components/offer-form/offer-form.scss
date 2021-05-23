@@ -41,16 +41,32 @@
   line-height: 31px;
 }
 
-.offer-form__input-name {
+.offer-form__input-name,
+.offer-form__input-phone {
   width: 100%;
-  padding: 20px 24px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
   letter-spacing: 0.03em;
   line-height: 18px;
-  color: #707C87;
+  color: $default-text-color;
   border: 1px solid #0A1E32;
   border-radius: 4px;
   background: transparent;
+}
+
+.offer-form__input-name {
+  padding: 20px 24px;
+}
+
+.offer-form__input-name::placeholder,
+.offer-form__input-phone::placeholder {
+  color: #707C87;
+}
+
+
+.offer-form__input-phone {
+  max-width: 300px;
+  padding: 19px 24px;
 }
 
 .offer-form__wrap {
@@ -58,18 +74,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.offer-form__input-phone {
-  width: 100%;
-  max-width: 300px;
-  padding: 19px 24px;
-  font-size: 18px;
-  letter-spacing: 0.03em;
-  color: #707C87;
-  border: 1px solid #0A1E32;
-  border-radius: 4px;
-  background: transparent;
 }
 
 .offer-form__wrap-btn {

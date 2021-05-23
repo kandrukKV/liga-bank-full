@@ -164,6 +164,7 @@
     height: 113px;
     top: 98px;
     right: 0;
+    z-index: 1;
   }
 
   .swiper-slide:nth-child(1) .tab__img{
@@ -187,7 +188,7 @@
   }
 
   .tab__bottom {
-    width: 100%;
+    max-width: 255px;
     font-size: 14px;
     line-height: 20px;
   }

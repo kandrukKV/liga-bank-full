@@ -8,9 +8,9 @@ const Logo = ({isWithText = false}) => {
 
   return (
     <div className={`logo${isWithText ? ` logo--big` : ``}`}>
-      <img className="logo__img" src={logoImg} alt="Лига Банк" width="28" height="25"/>
+      <img className="logo__img" src={`./${logoImg}`} alt="Лига Банк" width="28" height="25"/>
       <div className="logo__wrap">
-        <img className="logo__label" src={logoLabel} alt="Лига Банк" width="112" height="14"/>
+        <img className="logo__label" src={`./${logoLabel}`} alt="Лига Банк" width="112" height="14"/>
         <p className="logo__text">интернет-банк</p>
       </div>
     </div>

@@ -127,7 +127,7 @@ export const ProductSitting = {
       {
         id: 3,
         name: `Использовать материнский капитал`,
-        checked: true
+        checked: false
       }
     ],
     names: [`ипотеки`, `ипотечные`]
@@ -170,12 +170,12 @@ export const ProductSitting = {
       {
         id: 1,
         name: `Оформить КАСКО в нашем банке`,
-        checked: true
+        checked: false
       },
       {
         id: 2,
         name: `Оформить Страхование жизни в нашем банке`,
-        checked: true
+        checked: false
       },
     ],
     names: [`авто кредит`, `авто`]

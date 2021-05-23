@@ -39,7 +39,7 @@ const Tabs = () => {
             return (
               <SwiperSlide key={item.name}>
                 <div className="tabs__link">
-                  <img className="tabs__icon" src={item.icon} alt={`icon`}/>
+                  <img className="tabs__icon" src={`./${item.icon}`} alt={`icon`}/>
                   {item.name}
                 </div>
               </SwiperSlide>

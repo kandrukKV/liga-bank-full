@@ -9,7 +9,6 @@ const Select = ({value, changeValue}) => {
 
   const onChangeValue = (elValue) => {
     changeValue(elValue);
-    setIsSelectOpen(false);
   };
 
   return (

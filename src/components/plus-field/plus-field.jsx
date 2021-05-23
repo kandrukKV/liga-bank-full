@@ -4,12 +4,16 @@ import {getPlural} from "../../utils";
 import PropTypes from "prop-types";
 import "./plus-field.scss";
 
-const PlusField = ({propertyCost, onChangePropertyCost, settings}) => {
+const PlusField = ({propertyCost, onChangePropertyCost, settings, setIsCalcError}) => {
 
   const {name, min, max, step, fieldSuffixes} = settings;
   const [isError, setIsError] = useState(false);
 
-  const setFormErrorHandler = (value) => (value < min) || (value > max) ? setIsError(true) : setIsError(false);
+  const setFormErrorHandler = (value) => {
+    const error = (value < min) || (value > max);
+    setIsError(error);
+    setIsCalcError(error);
+  };
 
   return (
     <div className="plus-field">
@@ -63,7 +67,8 @@ PlusField.propTypes = {
     max: PropTypes.number,
     step: PropTypes.number,
     fieldSuffixes: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired
+  }).isRequired,
+  setIsCalcError: PropTypes.func.isRequired
 };
 
 export default PlusField;

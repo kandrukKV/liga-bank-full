@@ -13,9 +13,9 @@ const Slider = () => {
   const sliderParams = {
     pagination: true,
     loop: true,
-    autoplay: {
-      delay: 4000,
-    }
+    // autoplay: {
+    //   delay: 4000,
+    // }
   };
   return (
     <Swiper {...sliderParams}>
@@ -24,7 +24,7 @@ const Slider = () => {
           return (
             <SwiperSlide key={slide.subtitle}>
               <div className={`slider slider--${slide.background}`}>
-                <div className="theme-container slider__inner">
+                <div className="slider__inner theme-container">
                   <h2 className={`slider__title${slide.isWhite ? ` slider__title--white` : ``}`}>Лига Банк</h2>
                   <p className={`slider__subtitle${slide.isWhite ? ` slider__subtitle--white` : ``}`}>{slide.subtitle}</p>
                   <a className={`slider__button${slide.isWhite ? ` slider__button--white` : ``}`} href={`${slide.link}`}>{slide.linkName}</a>

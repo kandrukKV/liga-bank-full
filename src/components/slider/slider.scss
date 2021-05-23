@@ -145,6 +145,18 @@
     line-height: 16px;
   }
 
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 7px;
+  }
+}
+
+@media (max-width: $min-width) {
   .slider--first {
     background-position: -294px -55px;
     background-size: auto 131%;
@@ -158,16 +170,6 @@
   .slider--third {
     background-position: -288px 0px;
     background-size: auto 100%;
-  }
-
-  .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    margin: 0 3px;
-  }
-
-  .swiper-container-horizontal > .swiper-pagination-bullets{
-    bottom: 7px;
   }
 }
 

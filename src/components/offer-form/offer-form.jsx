@@ -47,7 +47,7 @@ const OfferForm = ({settings, propertyCost, initialFee, creditTerm, numberOfOffe
           <span className="offer-form__value">{settings.purpose}</span>
         </li>
         <li className="offer-form__item">
-          <span className="offer-form__key">Стоимость недвижимости</span>
+          <span className="offer-form__key">{settings.propertyCost.name}</span>
           <span className="offer-form__value">
             {propertyCost.toLocaleString()} {getPlural(propertyCost, settings.propertyCost.fieldSuffixes)}
           </span>
@@ -73,6 +73,7 @@ const OfferForm = ({settings, propertyCost, initialFee, creditTerm, numberOfOffe
           placeholder="ФИО"
           value={userName}
           autoFocus
+          aria-label={`name`}
           onChange={(evt) =>{
             setFormData({
               ...formData,
@@ -100,6 +101,7 @@ const OfferForm = ({settings, propertyCost, initialFee, creditTerm, numberOfOffe
           type="email"
           placeholder="E-mail"
           value={email}
+          aria-label={`email`}
           onChange={(evt) => {
             setFormData({
               ...formData,

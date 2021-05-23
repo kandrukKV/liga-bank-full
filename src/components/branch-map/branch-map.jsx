@@ -7,8 +7,8 @@ import {BANK_BRANCH_COORDINATES} from "../../const";
 const BranchMap = () => {
 
   return (
-    <section id="map" className="branch-map theme-container">
-      <h2 className="branch-map__header theme-container">Отделения Лига Банка</h2>
+    <section id="map" className="branch-map">
+      <h2 className="branch-map__header">Отделения Лига Банка</h2>
       <div className="branch-map__container">
         <YMaps>
           <Map

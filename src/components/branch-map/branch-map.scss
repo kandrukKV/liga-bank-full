@@ -1,8 +1,11 @@
 @import "../../design-tokens/variables";
 
 .branch-map {
-  padding-top:98px;
-  padding-bottom: 110px;
+  padding: 7px 15px 110px 15px;
+  width: 100%;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto;
 }
 
 .branch-map__header {
@@ -13,7 +16,6 @@
 }
 
 .branch-map__container {
-  padding: 0 15px;
   width: 100%;
   min-height: 462px;
   background-image: url("../../img/map-bg.jpg");
@@ -31,8 +33,9 @@
 
 @media (max-width: $tablet-width) {
   .branch-map {
-    padding-top: 69px;
     padding-bottom: 80px;
+    padding-right: 45px;
+    padding-left: 45px;
   }
 
   .branch-map__header {
@@ -41,15 +44,13 @@
     margin-bottom: 33px;
   }
 
-  .branch-map__container {
-    padding: 0 45px;
-  }
 }
 
 @media (max-width: $mobile-width) {
   .branch-map {
-    padding-top: 51px;
     padding-bottom: 61px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .branch-map__header {

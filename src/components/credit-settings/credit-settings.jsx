@@ -26,7 +26,8 @@ const CreditSettings = (props) => {
     setInitialFee,
     setCreditTerm,
     checkOption,
-    settings
+    settings,
+    setIsCalcError
   } = props;
 
   return (
@@ -39,6 +40,7 @@ const CreditSettings = (props) => {
           setInitialFee(((value ? value : 0) * settings.initialFee.min) / 100);
         }}
         propertyCost={propertyCost}
+        setIsCalcError={setIsCalcError}
       />
       <RangeField
         settings={settings.initialFee}
@@ -119,7 +121,8 @@ CreditSettings.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     checked: PropTypes.bool.isRequired
-  }))
+  })),
+  setIsCalcError: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreditSettings);

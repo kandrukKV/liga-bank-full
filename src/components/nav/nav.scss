@@ -9,10 +9,13 @@
   padding: 0;
   list-style: none;
   display: flex;
+  max-width: 520px;
+  flex-wrap: wrap;
 }
 
 .nav__item {
   margin-right: 25px;
+  margin-top: 5px;
 
   &:last-child {
     display: none;
@@ -61,11 +64,10 @@
 @media (max-width: $mobile-width){
   .nav {
     position: absolute;
-    padding: 0 15px;
+    padding: 0 15px 15px 15px;
     top: 42px;
     left: -100%;
     z-index: 10;
-    height: 100%;
     width: 100%;
     background-color: #FFFFFF;
     transition: left .5s;
