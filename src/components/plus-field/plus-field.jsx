@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import NumberFormat from "react-number-format";
 import {getPlural} from "../../utils";
 import PropTypes from "prop-types";
@@ -7,13 +7,8 @@ import "./plus-field.scss";
 const PlusField = ({propertyCost, onChangePropertyCost, settings, setIsCalcError}) => {
 
   const {name, min, max, step, fieldSuffixes} = settings;
-  const [isError, setIsError] = useState(false);
 
-  const setFormErrorHandler = (value) => {
-    const error = (value < min) || (value > max);
-    setIsError(error);
-    setIsCalcError(error);
-  };
+  const isError = (propertyCost < min) || (propertyCost > max);
 
   return (
     <div className="plus-field">
@@ -25,7 +20,7 @@ const PlusField = ({propertyCost, onChangePropertyCost, settings, setIsCalcError
           onClick={() => {
             const val = propertyCost - step;
             onChangePropertyCost(val);
-            setFormErrorHandler(val);
+            setIsCalcError(isError);
           }}
         >
           <span className="visually-hidden">-</span>
@@ -38,7 +33,7 @@ const PlusField = ({propertyCost, onChangePropertyCost, settings, setIsCalcError
           value={propertyCost}
           onValueChange={(values) => {
             onChangePropertyCost(values.floatValue);
-            setFormErrorHandler(values.floatValue);
+            setIsCalcError(isError);
           }}
         />
         <button
@@ -47,7 +42,7 @@ const PlusField = ({propertyCost, onChangePropertyCost, settings, setIsCalcError
           onClick={() => {
             const val = propertyCost + step;
             onChangePropertyCost(val);
-            setFormErrorHandler(val);
+            setIsCalcError(isError);
           }}
         >
           <span className="visually-hidden">+</span>

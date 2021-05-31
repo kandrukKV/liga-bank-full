@@ -19,14 +19,7 @@ const Header = () => {
           <button
             className="header__hamburger-btn"
             type="button"
-            onClick={() => setIsMobileMenuOpen((prev) => {
-              if (prev) {
-                document.body.style.overflow = `unset`;
-              } else {
-                document.body.style.overflow = `hidden`;
-              }
-              return !prev;
-            })}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             <svg className="header__hamburger-icon" width="16" height="12">
               <use href={sprite + `#hamburger`}/>
