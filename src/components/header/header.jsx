@@ -12,6 +12,12 @@ const Header = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  if (isMobileMenuOpen) {
+    document.body.style.overflow = `hidden`;
+  } else {
+    document.body.style.overflow = `unset`;
+  }
+
   return (
     <>
       <div className={`header theme-container${isMobileMenuOpen ? ` header--nav-open` : ``}`}>
